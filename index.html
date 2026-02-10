@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postecho - Steal the Beat</title>
+    <meta name="description" content="Share, discover, and steal music from your friends. Compatible with Spotify and Apple Music.">
+    
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --card-bg: #1c1c1e;
+            --accent-purple: #AF52DE;
+            --accent-red: #FF2D55;
+            --glass: rgba(28, 28, 30, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-purple);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1a0b2e 0%, #000000 70%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        h1 span {
+            color: var(--accent-purple);
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-ios {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        .btn-android {
+            border: 2px solid #333;
+            color: var(--text-color);
+            background: transparent;
+        }
+
+        /* Features */
+        .features {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Legal Section (Crucial for App Store) */
+        .legal-section {
+            padding: 80px 20px;
+            border-top: 1px solid #333;
+            background-color: #0a0a0a;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-block {
+            margin-bottom: 40px;
+        }
+
+        .legal-block h2 {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .legal-block h4 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+
+        .legal-block p, .legal-block ul {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .legal-block ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Postecho</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Don't just listen.<br><span>Steal the beat.</span></h1>
+            <p class="subtitle">The social music app where sharing is good, but stealing is better. Compatible with Spotify & Apple Music.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-ios">Download on iOS</a>
+                <a href="#" class="btn btn-android">Get it on Android</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 style="text-align: center;">How it works</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="icon">🎵</span>
+                <h3>Share Your Vibe</h3>
+                <p>Post your current anthem. Let your friends hear what you're listening to right now.</p>
+            </div>
+            <div class="card">
+                <span class="icon" style="color: var(--accent-purple);">🎭</span>
+                <h3>Steal to Save</h3>
+                <p>Like a song? Don't just like it—steal it. Add it to your collection with one tap.</p>
+            </div>
+            <div class="card">
+                <span class="icon">🔥</span>
+                <h3>Build Streaks</h3>
+                <p>Keep the music alive. Maintain streaks with friends by interacting daily.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="legal" class="legal-section">
+        <div class="legal-container">
+            
+            <div id="privacy" class="legal-block">
+                <h2>Privacy Policy</h2>
+                <p><strong>Last Updated:</strong> [TODAY'S DATE]</p>
+                <p>At Postecho, we take your privacy seriously. This policy outlines how we collect and use your data.</p>
+                
+                <h4>1. Data Collection</h4>
+                <p>We collect the following data to provide our services:</p>
+                <ul>
+                    <li><strong>Account Info:</strong> Username, Email address, Profile photo.</li>
+                    <li><strong>Usage Data:</strong> Songs you post, steal, or listen to.</li>
+                    <li><strong>Contacts (Optional):</strong> Used only to help you find friends on the app.</li>
+                </ul>
+
+                <h4>2. Third Party Services</h4>
+                <p>We integrate with Spotify and Apple Music APIs to play music. We do not store your login credentials for these services.</p>
+
+                <h4>3. Data Deletion</h4>
+                <p>You have the right to delete your account and data at any time. You can do this within the app under Settings > Delete Account, or by contacting support.</p>
+            </div>
+
+            <div id="terms" class="legal-block">
+                <h2>Terms of Service (EULA)</h2>
+                <p>By using Postecho, you agree to the following terms:</p>
+                
+                <h4>1. User Generated Content</h4>
+                <p>You are responsible for the content you post. We do not tolerate:</p>
+                <ul>
+                    <li>Hate speech, harassment, or bullying.</li>
+                    <li>Nudity or sexually explicit content.</li>
+                    <li>Illegal activities.</li>
+                </ul>
+                <p><strong>Zero Tolerance:</strong> Users found violating these terms will be banned immediately, and content will be removed.</p>
+
+                <h4>2. Blocking & Reporting</h4>
+                <p>You may block abusive users or report objectionable content directly within the app using the "Report" button on any post or profile.</p>
+            </div>
+
+            <div id="support" class="legal-block">
+                <h2>Contact & Support</h2>
+                <p>If you have any questions, need support, or want to report a violation, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL_HERE]" style="color: var(--accent-purple);">[YOUR_EMAIL_HERE]</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Postecho. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
