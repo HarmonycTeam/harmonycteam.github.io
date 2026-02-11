@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postecho - Steal the Beat</title>
+    <title>Tuness - Listen. Share. Steal.</title>
     <meta name="description" content="Share, discover, and steal music from your friends. Compatible with Spotify and Apple Music.">
     
     <style>
@@ -64,7 +64,7 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,75 +94,28 @@
             margin-bottom: 40px;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        .btn-ios {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-        }
-
-        .btn-android {
-            border: 2px solid #333;
-            color: var(--text-color);
-            background: transparent;
-        }
-
-        /* Features */
-        .features {
-            padding: 100px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .card {
-            background: var(--card-bg);
+        /* Scrollable Legal Box */
+        .legal-box {
+            background: #111;
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 12px;
+            height: 500px;
+            overflow-y: scroll;
             border: 1px solid #333;
+            color: #ccc;
+            text-align: left;
+            margin-top: 20px;
         }
 
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
+        .legal-box h1 { font-size: 2rem; margin-top: 0; }
+        .legal-box h2 { font-size: 1.5rem; color: #fff; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .legal-box h3 { font-size: 1.2rem; color: #fff; margin-top: 20px; margin-bottom: 10px; }
+        .legal-box p { font-size: 0.95rem; margin-bottom: 15px; color: #bbb; }
+        .legal-box ul { padding-left: 20px; margin-bottom: 15px; }
+        .legal-box li { margin-bottom: 8px; font-size: 0.95rem; }
+        .legal-box strong { color: #fff; }
 
-        h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        /* Legal Section (Crucial for App Store) */
+        /* Legal Section */
         .legal-section {
             padding: 80px 20px;
             border-top: 1px solid #333;
@@ -170,33 +123,18 @@
         }
 
         .legal-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .legal-block {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
-        .legal-block h2 {
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--text-color);
-        }
-
-        .legal-block h4 {
-            margin-top: 15px;
-            margin-bottom: 5px;
-            color: #ddd;
-        }
-
-        .legal-block p, .legal-block ul {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .legal-block ul {
-            padding-left: 20px;
         }
 
         footer {
@@ -211,50 +149,25 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             nav { padding: 20px; }
+            .legal-box { padding: 15px; height: 400px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">Postecho</div>
+        <div class="logo">Tuness</div>
         <div class="nav-links">
-            <a href="#features">Features</a>
             <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
             <a href="#support">Support</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Don't just listen.<br><span>Steal the beat.</span></h1>
+            <h1>Listen. Share.<br><span>Steal.</span></h1>
             <p class="subtitle">The social music app where sharing is good, but stealing is better. Compatible with Spotify & Apple Music.</p>
-            
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-ios">Download on iOS</a>
-                <a href="#" class="btn btn-android">Get it on Android</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <h2 style="text-align: center;">How it works</h2>
-        <div class="grid">
-            <div class="card">
-                <span class="icon">🎵</span>
-                <h3>Share Your Vibe</h3>
-                <p>Post your current anthem. Let your friends hear what you're listening to right now.</p>
-            </div>
-            <div class="card">
-                <span class="icon" style="color: var(--accent-purple);">🎭</span>
-                <h3>Steal to Save</h3>
-                <p>Like a song? Don't just like it—steal it. Add it to your collection with one tap.</p>
-            </div>
-            <div class="card">
-                <span class="icon">🔥</span>
-                <h3>Build Streaks</h3>
-                <p>Keep the music alive. Maintain streaks with friends by interacting daily.</p>
-            </div>
         </div>
     </section>
 
@@ -262,53 +175,138 @@
         <div class="legal-container">
             
             <div id="privacy" class="legal-block">
-                <h2>Privacy Policy</h2>
-                <p><strong>Last Updated:</strong> [TODAY'S DATE]</p>
-                <p>At Postecho, we take your privacy seriously. This policy outlines how we collect and use your data.</p>
+                <h2 class="section-title">Privacy Policy</h2>
                 
-                <h4>1. Data Collection</h4>
-                <p>We collect the following data to provide our services:</p>
-                <ul>
-                    <li><strong>Account Info:</strong> Username, Email address, Profile photo.</li>
-                    <li><strong>Usage Data:</strong> Songs you post, steal, or listen to.</li>
-                    <li><strong>Contacts (Optional):</strong> Used only to help you find friends on the app.</li>
-                </ul>
+                <div class="legal-box">
+                    <h1>Privacy Policy</h1>
+                    <p><strong>Last updated: February 11, 2026</strong></p>
+                    <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+                    <p>We use Your Personal Data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
 
-                <h4>2. Third Party Services</h4>
-                <p>We integrate with Spotify and Apple Music APIs to play music. We do not store your login credentials for these services.</p>
+                    <h2>Interpretation and Definitions</h2>
+                    <h3>Interpretation</h3>
+                    <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                    
+                    <h3>Definitions</h3>
+                    <p>For the purposes of this Privacy Policy:</p>
+                    <ul>
+                        <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+                        <li><strong>Application</strong> refers to Tuness, the software program provided by the Company.</li>
+                        <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Tuness.</li>
+                        <li><strong>Country</strong> refers to: Turkey.</li>
+                        <li><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</li>
+                        <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+                        <li><strong>Service</strong> refers to the Application.</li>
+                        <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company.</li>
+                        <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself.</li>
+                        <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+                    </ul>
 
-                <h4>3. Data Deletion</h4>
-                <p>You have the right to delete your account and data at any time. You can do this within the app under Settings > Delete Account, or by contacting support.</p>
+                    <h2>Collecting and Using Your Personal Data</h2>
+                    <h3>Types of Data Collected</h3>
+                    <p><strong>Personal Data:</strong> While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to: Email address, First name and last name, Usage Data.</p>
+                    
+                    <p><strong>Usage Data:</strong> Usage Data is collected automatically when using the Service. It may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+                    <h2>Use of Your Personal Data</h2>
+                    <p>The Company may use Personal Data for the following purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our Service.</li>
+                        <li>To manage Your Account.</li>
+                        <li>For the performance of a contract.</li>
+                        <li>To contact You.</li>
+                        <li>To provide You with news and special offers.</li>
+                        <li>To manage Your requests.</li>
+                    </ul>
+
+                    <h2>Retention of Your Personal Data</h2>
+                    <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations.</p>
+                    <p><strong>User Accounts:</strong> Retained for the duration of your account relationship plus up to 24 months after account closure.</p>
+
+                    <h2>Delete Your Personal Data</h2>
+                    <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You. Our Service gives You the ability to delete certain information about You from within the Service settings.</p>
+
+                    <h2>Security of Your Personal Data</h2>
+                    <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure.</p>
+
+                    <h2>Children's Privacy</h2>
+                    <p>Our Service does not address anyone under the age of 16. We do not knowingly collect personally identifiable information from anyone under the age of 16.</p>
+
+                    <h2>Changes to this Privacy Policy</h2>
+                    <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, You can contact us by email at: <strong>support@tuness.app</strong></p>
+                </div>
             </div>
 
             <div id="terms" class="legal-block">
-                <h2>Terms of Service (EULA)</h2>
-                <p>By using Postecho, you agree to the following terms:</p>
+                <h2 class="section-title">Terms of Service (EULA)</h2>
                 
-                <h4>1. User Generated Content</h4>
-                <p>You are responsible for the content you post. We do not tolerate:</p>
-                <ul>
-                    <li>Hate speech, harassment, or bullying.</li>
-                    <li>Nudity or sexually explicit content.</li>
-                    <li>Illegal activities.</li>
-                </ul>
-                <p><strong>Zero Tolerance:</strong> Users found violating these terms will be banned immediately, and content will be removed.</p>
+                <div class="legal-box">
+                    <h1>Terms and Conditions</h1>
+                    <p><strong>Last updated: February 11, 2026</strong></p>
+                    <p>Please read these terms and conditions carefully before using the Tuness mobile application operated by Us.</p>
 
-                <h4>2. Blocking & Reporting</h4>
-                <p>You may block abusive users or report objectionable content directly within the app using the "Report" button on any post or profile.</p>
+                    <h2>1. Acknowledgement</h2>
+                    <p>These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service. Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions.</p>
+
+                    <h2>2. User Accounts</h2>
+                    <p>When You create an account with Us, You must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of Your account on Our Service. You are responsible for safeguarding the password that You use to access the Service.</p>
+
+                    <h2>3. User Generated Content (UGC)</h2>
+                    <p>Our Service allows You to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that You post to the Service, including its legality, reliability, and appropriateness.</p>
+                    
+                    <h3>License to Tuness</h3>
+                    <p>By posting Content to the Service, You grant Us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through the Service. You retain any and all of Your rights to any Content You submit, post or display on or through the Service and You are responsible for protecting those rights.</p>
+
+                    <h3>Content Restrictions (Zero Tolerance Policy)</h3>
+                    <p>You may not transmit any Content that is unlawful, offensive, upsetting, intended to disgust, threatening, libelous, defamatory, obscene or otherwise objectionable. Examples of such objectionable Content include, but are not limited to, the following:</p>
+                    <ul>
+                        <li>Unlawful or promoting unlawful activity.</li>
+                        <li>Defamatory, discriminatory, or mean-spirited content, including references or commentary about religion, race, sexual orientation, gender, national/ethnic origin, or other targeted groups.</li>
+                        <li>Spam, machine – or randomly – generated, constituting unauthorized or unsolicited advertising.</li>
+                        <li>Containing or installing any viruses, worms, malware, trojan horses, or other content that is designed or intended to disrupt, damage, or limit the functioning of any software, hardware or telecommunications equipment.</li>
+                        <li>Infringing on any proprietary rights of any party, including patent, trademark, trade secret, copyright, right of publicity or other rights.</li>
+                    </ul>
+
+                    <h2>4. Content Moderation, Blocking & Reporting</h2>
+                    <p>Tuness has a <strong>Zero Tolerance</strong> policy for objectionable content and abusive users.</p>
+                    <ul>
+                        <li><strong>Monitoring:</strong> We reserve the right, but not the obligation, to monitor and edit all Content provided by Users.</li>
+                        <li><strong>Reporting:</strong> Users can flag objectionable content or abusive behavior directly within the app using the "Report" button found on posts and user profiles. Reports are reviewed by our moderation team within 24 hours.</li>
+                        <li><strong>Blocking:</strong> Users have the ability to block other users to prevent them from seeing their content or interacting with them.</li>
+                        <li><strong>Termination:</strong> We may terminate or suspend Your account immediately, without prior notice or liability, if You breach these Terms, specifically regarding the posting of objectionable content.</li>
+                    </ul>
+
+                    <h2>5. Intellectual Property</h2>
+                    <p>The Service and its original content (excluding Content provided by You or other users), features and functionality are and will remain the exclusive property of Tuness and its licensors. The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries.</p>
+
+                    <h2>6. Links to Other Websites</h2>
+                    <p>Our Service may contain links to third-party web sites or services (such as Spotify or Apple Music) that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services.</p>
+
+                    <h2>7. Limitation of Liability</h2>
+                    <p>In no event shall the Company, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from Your access to or use of or inability to access or use the Service.</p>
+
+                    <h2>8. Governing Law</h2>
+                    <p>The laws of Turkey, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
+
+                    <h2>9. Contact Us</h2>
+                    <p>If you have any questions about these Terms and Conditions, You can contact us via email: <strong>support@tuness.app</strong></p>
+                </div>
             </div>
 
-            <div id="support" class="legal-block">
-                <h2>Contact & Support</h2>
-                <p>If you have any questions, need support, or want to report a violation, please contact us at:</p>
-                <p><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL_HERE]" style="color: var(--accent-purple);">[YOUR_EMAIL_HERE]</a></p>
+            <div id="support" class="legal-block" style="text-align: center;">
+                <h2>Support</h2>
+                <p>Need help with your account or want to report an issue?</p>
+                <p>Email us at: <a href="mailto:support@tuness.app" style="color: var(--accent-purple);">support@tuness.app</a></p>
             </div>
 
         </div>
     </section>
 
     <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Postecho. All rights reserved.</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Tuness. All rights reserved.</p>
     </footer>
 
 </body>
