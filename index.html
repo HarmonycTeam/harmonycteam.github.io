@@ -47,7 +47,7 @@
             border-bottom: 1px solid #333;
         }
 
-        /* ✅ LOGO STYLING FOR NAVBAR */
+        /* LOGO STYLING */
         .logo-container {
             display: flex;
             align-items: center;
@@ -56,15 +56,24 @@
         }
 
         .logo-img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%; /* Ensures it looks perfect */
+            width: 36px; /* Slightly larger */
+            height: 36px;
+            border-radius: 50%;
         }
 
+        /* ✅ UPDATED LOGO TEXT STYLE */
         .logo-text {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -1px;
+            font-weight: 900; /* Extra Bold */
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+            
+            /* Gradient Text Effect */
+            background: linear-gradient(135deg, #ffffff 30%, #AF52DE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            
+            /* Fallback for old browsers */
             color: #fff;
         }
 
@@ -98,13 +107,12 @@
             align-items: center;
         }
 
-        /* ✅ APP ICON IN HERO */
         .app-icon-hero {
             width: 120px;
             height: 120px;
-            border-radius: 24px; /* iOS style rounding */
+            border-radius: 24px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(175, 82, 222, 0.4); /* Purple glow */
+            box-shadow: 0 10px 40px rgba(175, 82, 222, 0.4);
         }
 
         h1 {
@@ -204,7 +212,7 @@
             <img src="icon-512-maskable.png" alt="Harmonyc App Icon" class="app-icon-hero">
             
             <h1>Listen. Share.<br><span>Steal.</span></h1>
-            <p class="subtitle">The social music app where sharing is good, but being stolen is better. Compatible with Spotify & Apple Music.</p>
+            <p class="subtitle">The social music app where sharing is good, but stealing is better. Compatible with Spotify & Apple Music.</p>
         </div>
     </section>
 
