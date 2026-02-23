@@ -90,37 +90,26 @@
             line-height: 1.5;
         }
 
-        /* BUTTONS */
+        /* COMING SOON BADGE */
         .cta-container {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
             justify-content: center;
         }
 
-        .store-btn {
-            padding: 15px 30px;
-            border-radius: 12px;
-            text-decoration: none;
+        .coming-soon-badge {
+            padding: 15px 40px;
+            border-radius: 30px;
             font-weight: 700;
-            transition: transform 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-purple);
+            background: rgba(175, 82, 222, 0.1);
+            border: 2px solid var(--accent-purple);
+            box-shadow: 0 0 20px rgba(175, 82, 222, 0.4);
+            cursor: default; /* Makes it clear it's not a clickable link yet */
+            user-select: none;
         }
-
-        .btn-primary {
-            background: white;
-            color: black;
-        }
-
-        .btn-secondary {
-            background: #222;
-            color: white;
-            border: 1px solid #333;
-        }
-
-        .store-btn:hover { transform: scale(1.05); }
 
         /* FOOTER */
         footer {
@@ -158,12 +147,9 @@
         <p>The social music app where sharing is good, but being stolen is better.</p>
         
         <div class="cta-container">
-            <a href="#" class="store-btn btn-primary">
-                Download for iOS
-            </a>
-            <a href="#" class="store-btn btn-secondary">
-                Get it on Android
-            </a>
+            <div class="coming-soon-badge">
+                Coming Soon
+            </div>
         </div>
     </section>
 
